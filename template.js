@@ -14,6 +14,14 @@ exports.description = 'Create a commonjs module, including Nodeunit unit tests.'
 // Template-specific notes to be displayed before question prompts.
 exports.notes = '';
 
+// Template-specific notes to be displayed after question prompts.
+exports.after = 'You should now install project dependencies with _npm ' +
+  'install_. After that, you may execute project tasks with _grunt_. For ' +
+  'more information about installing and configuring Grunt, please see ' +
+  'the Getting Started guide:' +
+  '\n\n' +
+  'http://gruntjs.com/getting-started';
+
 // Any existing file or directory matching this wildcard will cause a warning.
 exports.warnOn = '*';
 
@@ -38,14 +46,11 @@ exports.template = function(grunt, init, done) {
   ], function(err, props) {
     props.keywords = [];
     props.devDependencies = {
-      // TODO: ADJUST VERSIONS FOR 0.4.0 FINAL
-      'grunt-contrib-concat': '0.1.2rc6',
-      'grunt-contrib-uglify': '0.1.1rc6',
-      'grunt-contrib-jshint': '0.1.1rc6',
-      'grunt-contrib-nodeunit': '0.1.2rc6',
-      'grunt-contrib-watch': '0.2.0rc5',
-      // TODO: REMOVE FOR 0.4.0 FINAL
-      'grunt': '0.4.0rc6',
+      'grunt-contrib-concat': '~0.1.2',
+      'grunt-contrib-uglify': '~0.1.1',
+      'grunt-contrib-jshint': '~0.1.1',
+      'grunt-contrib-nodeunit': '~0.1.2',
+      'grunt-contrib-watch': '~0.2.0',
     };
 
     // Files to copy (and process).
